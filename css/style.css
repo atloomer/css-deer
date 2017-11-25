@@ -1,0 +1,358 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50vh;
+  padding-bottom: 100px;
+}
+
+.canvas-container {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  height: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mountains {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  width: auto;
+}
+.mountains .peak01,
+.mountains .peak02,
+.mountains .peak03,
+.mountains .peak04 {
+  margin: -15px;
+  display: inline-block;
+  border-top: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 90px solid rgba(215, 229, 242, 0.49);
+  border-left: 60px solid transparent;
+  margin-top: -40px;
+}
+.mountains .peak01:after,
+.mountains .peak02:after,
+.mountains .peak03:after,
+.mountains .peak04:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  top: 200px;
+  left: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+1,0.7+93 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#b3ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+.mountains .peak03 {
+  border-bottom: 110px solid rgba(215, 229, 242, 0.49);
+}
+.mountains .peak04 {
+  border-bottom: 75px solid rgba(215, 229, 242, 0.49);
+}
+
+.sun {
+  width: 45px;
+  height: 45px;
+  background-color: #fe5a22;
+  position: absolute;
+  top: 70px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+}
+
+.antlers {
+  display: block;
+  width: 125px;
+  height: 80px;
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+.antlers .main {
+  display: block;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #2a3a47;
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid transparent;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-60deg) translateY(-30px) translateX(50px);
+          transform: rotate(-60deg) translateY(-30px) translateX(50px);
+}
+.antlers .top-circle {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: -17px;
+  border-right: 4px solid #2a3a47;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  -webkit-transform: rotate(-80deg);
+          transform: rotate(-80deg);
+}
+.antlers .middle-circle {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  border-bottom: 4px solid #2a3a47;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.antlers .bottom-circle {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-bottom: 4px solid #2a3a47;
+  border-left: 4px solid transparent;
+  border-right: 4px solid #2a3a47;
+  border-top: 4px solid transparent;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.head-triangle {
+  width: 50px;
+  border-top: 10px solid transparent;
+  border-right: 50px solid white;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: 1;
+}
+
+.deer-head {
+  display: block;
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-45px);
+          transform: translateX(-45px);
+}
+.deer-head .head {
+  width: 60px;
+  height: 20px;
+  background-color: #619de8;
+  position: absolute;
+  right: 0;
+  border-radius: 50% 0% 70% 0%;
+}
+.deer-head .head-shadow {
+  width: 60px;
+  height: 20px;
+  background-color: #6486df;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  border-radius: 50% 0% 70% 0%;
+  z-index: -1;
+}
+.deer-head .ear {
+  width: 15px;
+  height: 15px;
+  left: 8px;
+  top: -3px;
+  background-color: #619de8;
+  position: absolute;
+  border-radius: 100% 0 100% 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
+}
+
+.concave-body-fix {
+  width: 20px;
+  height: 20px;
+  border-left: 7px solid #619de8;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  top: 140px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-33px) rotate(-45deg);
+          transform: translateX(-33px) rotate(-45deg);
+}
+
+.neck {
+  width: 25px;
+  height: 80px;
+  background-color: #619de8;
+  position: absolute;
+  top: 105px;
+  border-radius: 25% 0 0 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-54px);
+          transform: translate(-54px);
+}
+
+.body {
+  width: 103px;
+  height: 40px;
+  background-color: #619de8;
+  position: absolute;
+  top: 165px;
+  border-radius: 15px 20px;
+  z-index: 2;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.tail {
+  width: 12px;
+  height: 12px;
+  left: 98px;
+  top: -6px;
+  background-color: #2a3a47;
+  position: absolute;
+  border-radius: 100% 0 100% 0;
+}
+
+.front-legs {
+  width: 40px;
+  height: 80px;
+  position: absolute;
+  top: 190px;
+  z-index: 1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+.front-legs .right-leg {
+  width: 3px;
+  border-top: 80px solid #2a3a47;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+}
+.front-legs .left-leg {
+  width: 3px;
+  border-top: 80px solid #619de8;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  -webkit-transform: translateX(12px);
+          transform: translateX(12px);
+}
+
+.back-legs {
+  width: 70px;
+  height: 80px;
+  position: absolute;
+  top: 190px;
+  z-index: 99999;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(25px);
+          transform: translateX(25px);
+}
+.back-legs .thigh {
+  width: 44px;
+  height: 30px;
+  background-color: #619de8;
+  position: absolute;
+  border-radius: 20px 0px 20px 20px;
+  top: -4px;
+}
+.back-legs .back-right {
+  width: 3px;
+  border-top: 80px solid #2a3a47;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  z-index: -9;
+  left: 22px;
+}
+.back-legs .back-left {
+  width: 3px;
+  border-top: 80px solid #619de8;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  -webkit-transform: translateX(33px);
+          transform: translateX(33px);
+}
+
+.shadow {
+  width: 130px;
+  height: 20px;
+  background-color: rgba(215, 229, 242, 0.49);
+  position: absolute;
+  top: 260px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-12px);
+          transform: translateX(-12px);
+}
